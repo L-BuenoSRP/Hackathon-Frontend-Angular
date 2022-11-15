@@ -20,5 +20,6 @@ export class AppComponent {
 
   getCompanies(): void{
     this.companies = this.cardService.getCompanies();
+    console.log(this.companies);
   }
 }
