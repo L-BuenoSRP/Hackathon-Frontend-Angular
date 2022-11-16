@@ -11,11 +11,18 @@ import { CardService } from './services/card.service';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { OdsModalComponent } from './components/ods-modal/ods-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CardGroupComponent } from './components/card-group/card-group.component';
+import { FormsModule } from '@angular/forms';
+import { FilterCompaniesPipePipe } from './pipes/filter-companies-pipe.pipe';
+import { NoticiasModalComponent } from './components/noticias-modal/noticias-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    OdsModalComponent
+    OdsModalComponent,
+    CardGroupComponent,
+    FilterCompaniesPipePipe,
+    NoticiasModalComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +30,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [CardService, HttpErrorHandler],
   bootstrap: [AppComponent]
